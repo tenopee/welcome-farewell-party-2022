@@ -14,7 +14,10 @@ export default {
 			},
 			{
 				name: 'format-detection', content: 'telephone=no',
-			}
+			},
+			{
+				name: 'robots', content: 'noindex, nofollow',
+			},
 		],
 		link: [
 			{
