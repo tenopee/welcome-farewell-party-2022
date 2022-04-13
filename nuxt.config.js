@@ -1,7 +1,7 @@
 export default {
 	target: 'static',
 	head: {
-		title: 'Designer × Frontend Welcome And Farewell Party 2022',
+		title: 'Welcome And Farewell Party 2022',
 		htmlAttrs: {
 			lang: 'ja',
 		},
