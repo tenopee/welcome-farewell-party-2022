@@ -30,6 +30,14 @@ export default {
 		line-height: 26px;
 		color: white;
 		text-align: center;
+		white-space: nowrap;
 		opacity: 0.8;
+	}
+	@media (max-width: 767px) {
+		.text {
+			left: 45%;
+			width: fit-content;
+			padding: 0 15px;
+		}
 	}
 </style>

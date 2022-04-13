@@ -1,14 +1,11 @@
 <template>
-	<nav class="menu-bar-wrap">
-		<select size="10" name="menu" v-model='page' class="menu" @change="changePage">
-			<option value="top" selected>トップ</option>
-			<option value="prepare">事前準備</option>
-			<option value="contents">コンテンツ</option>
-			<option value="member">参加メンバー</option>
-			<option value="talk">トークグループ分け</option>
-		</select>
-
-	</nav>
+	<menu class="menu-bar-wrap">
+		<button type="button" value="top" @click="changePage($event)">トップ</button>
+		<button type="button" value="prepare" @click="changePage($event)">事前準備</button>
+		<button type="button" value="contents" @click="changePage($event)">コンテンツ</button>
+		<button type="button" value="member" @click="changePage($event)">参加メンバー</button>
+		<button type="button" value="talk" @click="changePage($event)">トークグループ分け</button>
+	</menu>
 </template>
 <script>
 export default {
@@ -19,7 +16,8 @@ export default {
 		}
 	},
 	methods: {
-		changePage() {
+		changePage(e) {
+			this.page = e.target.value;
 			this.$emit('changePage', this.page);
 		},
 	},
@@ -34,27 +32,45 @@ export default {
 		background: #0F7E83;
 		height: calc(100vh - 44px);
 		box-sizing: border-box;
+		z-index: 1;
 	}
-	.menu {
+	menu {
 		width: 100%;
 	}
-	.menu > option {
+	menu > button {
+		width: 100%;
 		padding: 10px 20px;
 		font-size: 16px;
 		line-height: 40px;
 		color: white;
+		text-align: left;
 	}
-	.menu > option::before {
+	menu > button::before {
 		content: "＃";
 	}
-	.menu > option:hover {
+	menu > button:hover {
 		background: #D37C70;
 		cursor: pointer;
 		color: white;
 	}
-	.menu > option:checked,
-	.menu > option:active {
+	menu > option:checked,
+	menu > option:active {
 		background: #0F7E83;
 		color: white;
+	}
+	@media (max-width: 767px) {
+		.menu-bar-wrap {
+			height: fit-content;
+			display: flex;
+			width: 100vw;
+			line-height: 1.4;
+			padding: 0;
+		}
+		menu > button {
+			font-size: 12px;
+			line-height: 20px;
+			padding: 5px 10px;
+			text-align: center;
+		}
 	}
 </style>

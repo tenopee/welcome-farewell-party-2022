@@ -54,14 +54,13 @@ export default {
 	a {
 		text-decoration: none;
 	}
-	select {
-		background: none;
-		border: none;
-		appearance: none;
-		outline: none;
-	}
-	select:focus {
-		background: none;
+	button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
 	}
 	main {
 		display: flex;
@@ -71,7 +70,6 @@ export default {
 		font-size: 14px;
 	}
 	.title {
-		width: 100%;
 		padding: 10px 20px;
 		border-bottom: 1px solid #cccccc;
 		font-weight: bold;
@@ -159,5 +157,11 @@ export default {
 		font-weight: bold;
 		line-height: 20px;
 		white-space: nowrap;
+	}
+
+	@media (max-width: 767px) {
+		main {
+			display: block;
+		}
 	}
 </style>
