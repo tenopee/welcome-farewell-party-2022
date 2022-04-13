@@ -1,12 +1,13 @@
 <template>
 	<nav class="menu-bar-wrap">
-		<ul class="menu">
-			<li>トップ</li>
-			<li>事前準備</li>
-			<li>コンテンツ</li>
-			<li>参加メンバー</li>
-			<li>トークグループ分け</li>
-		</ul>
+		<select size="10" name="menu" v-model='page' class="menu" @change="changePage">
+			<option value="top" selected>トップ</option>
+			<option value="prepare">事前準備</option>
+			<option value="contents">コンテンツ</option>
+			<option value="member">参加メンバー</option>
+			<option value="talk">トークグループ分け</option>
+		</select>
+
 	</nav>
 </template>
 <script>
@@ -14,39 +15,46 @@ export default {
 	name: 'MenuBar',
 	data() {
 		return {
-			open: false,
+			page: 'top',
 		}
 	},
 	methods: {
-		closeModal() {
-			console.log('hoge');
+		changePage() {
+			this.$emit('changePage', this.page);
 		},
 	},
 }
 </script>
 <style scoped>
 	.menu-bar-wrap {
+		position: sticky;
+		top: 44px;
 		padding: 20px 0;
-		width: 20%;
+		width: 300px;
 		background: #0F7E83;
 		height: calc(100vh - 44px);
 		box-sizing: border-box;
 	}
 	.menu {
-		color: white;
-		opacity: 0.8;
+		width: 100%;
 	}
-	.menu > li {
-		padding: 0 20px;
-		font-size: 18px;
+	.menu > option {
+		padding: 10px 20px;
+		font-size: 16px;
 		line-height: 40px;
+		color: white;
 	}
-	.menu > li::before {
+	.menu > option::before {
 		content: "＃";
 	}
-	.menu > li:hover {
+	.menu > option:hover {
 		background: #D37C70;
 		cursor: pointer;
+		color: white;
+	}
+	.menu > option:checked,
+	.menu > option:active {
+		background: #0F7E83;
 		color: white;
 	}
 </style>

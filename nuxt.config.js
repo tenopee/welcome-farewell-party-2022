@@ -18,6 +18,9 @@ export default {
 			{
 				name: 'robots', content: 'noindex, nofollow',
 			},
+			{
+				name: 'referrer', content: 'no-referrer',
+			},
 		],
 		link: [
 			{
