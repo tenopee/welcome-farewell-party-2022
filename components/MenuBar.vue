@@ -1,10 +1,10 @@
 <template>
 	<menu class="menu-bar-wrap">
-		<button type="button" value="top" @click="changePage($event)">トップ</button>
-		<button type="button" value="prepare" @click="changePage($event)">事前準備</button>
-		<button type="button" value="contents" @click="changePage($event)">コンテンツ</button>
-		<button type="button" value="member" @click="changePage($event)">参加メンバー</button>
-		<button type="button" value="talk" @click="changePage($event)">トークグループ分け</button>
+		<button type="button" value="top" class="top" @click="changePage($event)">トップ</button>
+		<button type="button" value="prepare" class="prepare" @click="changePage($event)">事前準備</button>
+		<button type="button" value="contents" class="contents" @click="changePage($event)">コンテンツ</button>
+		<button type="button" value="member" class="member" @click="changePage($event)">参加メンバー</button>
+		<button type="button" value="talk" class="talk" @click="changePage($event)">トークグループ分け</button>
 	</menu>
 </template>
 <script>
@@ -34,10 +34,10 @@ export default {
 		box-sizing: border-box;
 		z-index: 1;
 	}
-	menu {
+	.menu-bar-wrap {
 		width: 100%;
 	}
-	menu > button {
+	.menu-bar-wrap > button {
 		width: 100%;
 		padding: 10px 20px;
 		font-size: 16px;
@@ -45,32 +45,41 @@ export default {
 		color: white;
 		text-align: left;
 	}
-	menu > button::before {
+	.menu-bar-wrap > button::before {
 		content: "＃";
 	}
-	menu > button:hover {
+	.menu-bar-wrap > button:hover {
 		background: #D37C70;
 		cursor: pointer;
 		color: white;
 	}
-	menu > option:checked,
-	menu > option:active {
+	.menu-bar-wrap > option:checked,
+	.menu-bar-wrap > option:active {
 		background: #0F7E83;
 		color: white;
 	}
 	@media (max-width: 767px) {
 		.menu-bar-wrap {
-			height: fit-content;
 			display: flex;
+			flex-wrap: wrap;
+			height: fit-content;
 			width: 100vw;
-			line-height: 1.4;
 			padding: 0;
 		}
-		menu > button {
+		.menu-bar-wrap > button {
 			font-size: 12px;
-			line-height: 20px;
-			padding: 5px 10px;
+			line-height: 16px;
+			padding: 4px 0;
 			text-align: center;
+		}
+		.menu-bar-wrap > button.top,
+		.menu-bar-wrap > button.prepare,
+		.menu-bar-wrap > button.contents {
+			width: calc(100vw / 3);
+		}
+		.menu-bar-wrap > button.member,
+		.menu-bar-wrap > button.talk {
+			width: calc(100vw / 2);
 		}
 	}
 </style>
