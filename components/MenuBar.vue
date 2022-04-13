@@ -34,9 +34,6 @@ export default {
 		box-sizing: border-box;
 		z-index: 1;
 	}
-	.menu-bar-wrap {
-		width: 100%;
-	}
 	.menu-bar-wrap > button {
 		width: 100%;
 		padding: 10px 20px;
