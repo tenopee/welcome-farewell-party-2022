@@ -39,7 +39,7 @@
 				<p class="text">歓迎会主役！！</p>
 			</div>
 		</li>
-		<li>
+		<!-- <li>
 			<p class="img">
 				<img src="../assets/4.png" alt="かなぴょんの写真" />
 			</p>
@@ -50,7 +50,7 @@
 			<div class="comment">
 				<p class="text">kpop初心者</p>
 			</div>
-		</li>
+		</li> -->
 		<li>
 			<p class="img">
 				<img src="../assets/5.png" alt="ふるちぃの写真" />
@@ -138,7 +138,7 @@
 				<p class="text">良い枕が欲しい</p>
 			</div>
 		</li>
-		<li>
+		<!-- <li>
 			<p class="img">
 				<img src="../assets/12.png" alt="とりっぴーの写真" />
 			</p>
@@ -149,7 +149,7 @@
 			<div class="comment">
 				<p class="text">今度「出川哲朗の充電させてもらえませんか?」にちょっと出るかもしれない</p>
 			</div>
-		</li>
+		</li> -->
 		<li>
 			<p class="img">
 				<img src="../assets/13.png" alt="シローさんの写真" />
