@@ -164,10 +164,10 @@
 		</li>
 		<li>
 			<p class="img">
-				<img src="../assets/14.png" alt="かいのぴーの写真" />
+				<img src="../assets/14.png" alt="いのぴーの写真" />
 			</p>
 			<div class="info">
-				<p class="name">かいのぴー</p>
+				<p class="name">いのぴー</p>
 				<p class="time">20:22</p>
 			</div>
 			<div class="comment">
