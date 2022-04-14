@@ -10,7 +10,8 @@
 					<Prepare v-else-if="page === 'prepare'"/>
 					<Contents v-else-if="page === 'contents'"/>
 					<Member v-else-if="page === 'member'"/>
-					<TalkGroup v-else/>
+					<TalkGroup v-else-if="page === 'talkGroup'"/>
+					<Creative v-else/>
 				</div>
 			</div>
 		</main>
@@ -36,8 +37,10 @@ export default {
 				this.title = 'コンテンツ';
 			} else if (this.page === 'member') {
 				this.title = '参加メンバー';
-			} else {
+			} else if (this.page === 'talkGroup') {
 				this.title = 'トークグループ分け';
+			} else {
+				this.title = '作品集';
 			}
 		}
 	}

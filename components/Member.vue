@@ -114,7 +114,7 @@
 				<p class="text">Apex・Fortnite</p>
 			</div>
 		</li>
-		<li>
+		<!-- <li>
 			<p class="img">
 				<img src="../assets/10.png" alt="こっしーの写真" />
 			</p>
@@ -125,7 +125,7 @@
 			<div class="comment">
 				<p class="text">トロピカーナの栄養補給できるやつとポイフル大好き</p>
 			</div>
-		</li>
+		</li> -->
 		<li>
 			<p class="img">
 				<img src="../assets/11.png" alt="ふるぽんの写真" />

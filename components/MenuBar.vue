@@ -4,7 +4,8 @@
 		<button type="button" value="prepare" class="prepare" @click="changePage($event)">事前準備</button>
 		<button type="button" value="contents" class="contents" @click="changePage($event)">コンテンツ</button>
 		<button type="button" value="member" class="member" @click="changePage($event)">参加メンバー</button>
-		<button type="button" value="talk" class="talk" @click="changePage($event)">トークグループ分け</button>
+		<button type="button" value="talkGroup" class="talkGroup" @click="changePage($event)">トークグループ分け</button>
+		<button type="button" value="creative" class="creative" @click="changePage($event)">作品集</button>
 	</menu>
 </template>
 <script>
@@ -71,12 +72,11 @@ export default {
 		}
 		.menu-bar-wrap > button.top,
 		.menu-bar-wrap > button.prepare,
-		.menu-bar-wrap > button.contents {
-			width: calc(100vw / 3);
-		}
+		.menu-bar-wrap > button.contents,
 		.menu-bar-wrap > button.member,
-		.menu-bar-wrap > button.talk {
-			width: calc(100vw / 2);
+		.menu-bar-wrap > button.talkGroup,
+		.menu-bar-wrap > button.creative {
+			width: calc(100vw / 3);
 		}
 	}
 </style>
